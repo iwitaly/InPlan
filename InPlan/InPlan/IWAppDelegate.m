@@ -6,13 +6,26 @@
 //  Copyright (c) 2013 Виталий Давыдов. All rights reserved.
 //
 
+#import "ActiveRecord.h"
 #import "IWAppDelegate.h"
 
 @implementation IWAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+#warning implement in future
+- (void)createDefaultCoursesAndUsersToDataBase {
+    
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [ActiveRecord applyConfiguration:^(ARConfiguration *config) {
+        config.databasePath = ARDocumentsDatabasePath(@"Table");
+        NSLog(@"%@", config.databasePath);
+    }];
+    
+//    [ActiveRecord clearDatabase];
+//    [self createDefaultCoursesAndUsersToDataBase];
+    
     return YES;
 }
 							

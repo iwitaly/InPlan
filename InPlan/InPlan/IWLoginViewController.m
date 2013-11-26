@@ -6,22 +6,25 @@
 //  Copyright (c) 2013 Виталий Давыдов. All rights reserved.
 //
 
-#import "IWViewController.h"
+#import "IWLoginViewController.h"
 
-@interface IWViewController ()
+@interface IWLoginViewController ()
 
 @end
 
-@implementation IWViewController
+@implementation IWLoginViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
+
+- (IBAction)userChoseHisType:(UIButton *)sender {
+    [self performSegueWithIdentifier:@"userChoseHisType" sender:nil];
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
