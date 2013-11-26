@@ -7,7 +7,13 @@
 //
 
 #import "ActiveRecord.h"
+#import "IWRequiments.h"
 
 @interface IWCourse : ActiveRecord
+
+@property NSString *name;
+//@property IWRequiments *req;
+@property float price;
+//@property NSArray *professors;
 
 @end

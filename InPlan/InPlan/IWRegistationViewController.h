@@ -1,5 +1,5 @@
 //
-//  IWLoginViewController.h
+//  IWRegistationViewController.h
 //  InPlan
 //
 //  Created by Виталий Давыдов on 26.11.13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IWLoginViewController : UIViewController
+@interface IWRegistationViewController : UIViewController
 
 @end

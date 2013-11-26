@@ -7,7 +7,20 @@
 //
 
 #import "ActiveRecord.h"
+#import "IWCourse.h"
+#import "IWSpecialization.h"
 
 @interface IWStudent : ActiveRecord
+
+@property NSString *name;
+
+@property NSString *password;
+
+//@property NSArray *courses;
+
+//@property IWSpecialization *specialization;
+
++ (IWStudent *)studentWithName:(NSString *)name andPass:(NSString *)pass;
++ (IWStudent *)studentWithNameFromBase:(NSString *)name;
 
 @end

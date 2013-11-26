@@ -10,4 +10,9 @@
 
 @implementation IWCourse
 
+@dynamic name;
+//@dynamic req;
+@dynamic price;
+//@dynamic professors;
+
 @end

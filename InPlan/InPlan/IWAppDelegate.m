@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Виталий Давыдов. All rights reserved.
 //
 
+#import "IWStudent.h"
 #import "ActiveRecord.h"
 #import "IWAppDelegate.h"
 
@@ -23,7 +24,7 @@
         NSLog(@"%@", config.databasePath);
     }];
     
-//    [ActiveRecord clearDatabase];
+    [ActiveRecord clearDatabase];
 //    [self createDefaultCoursesAndUsersToDataBase];
     
     return YES;
