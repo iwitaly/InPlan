@@ -16,9 +16,9 @@
 
 @property NSString *password;
 
-//@property NSArray *courses;
+@property NSData *courses;
 
-//@property IWSpecialization *specialization;
+@property NSData *specialization; //IWSpecialization
 
 + (IWStudent *)studentWithName:(NSString *)name andPass:(NSString *)pass;
 + (IWStudent *)studentWithNameFromBase:(NSString *)name;

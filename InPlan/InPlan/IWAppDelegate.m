@@ -7,14 +7,29 @@
 //
 
 #import "IWStudent.h"
+#import "IWCourse.h"
 #import "ActiveRecord.h"
 #import "IWAppDelegate.h"
 
 @implementation IWAppDelegate
 
 #warning implement in future
-- (void)createDefaultCoursesAndUsersToDataBase {
+- (void)addCourseWithName:(NSString *)name price:(float)price requiments:(NSArray *)req professors:(NSArray *)prof {
+    IWCourse *course = [IWCourse courseWithName:name andPrice:price];
+    course.req = [NSKeyedArchiver archivedDataWithRootObject:req];
+    course.professors = [NSKeyedArchiver archivedDataWithRootObject:prof];
     
+    [course save];
+}
+
+- (void)createDefaultCoursesAndUsersToDataBase {
+    NSArray *professors = [NSArray arrayWithObjects:@"Besov", @"Beck", nil];
+    NSArray *requiments;
+    [self addCourseWithName:@"Matan" price:100 requiments:nil professors:professors];
+    
+    professors = [NSArray arrayWithObjects:@"Jaskov", @"Musin", nil];
+    requiments = [NSArray arrayWithObjects:@"Matan", nil];
+    [self addCourseWithName:@"Theory of probability" price:250 requiments:requiments professors:professors];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -25,7 +40,7 @@
     }];
     
     [ActiveRecord clearDatabase];
-//    [self createDefaultCoursesAndUsersToDataBase];
+    [self createDefaultCoursesAndUsersToDataBase];
     
     return YES;
 }

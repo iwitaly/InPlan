@@ -11,7 +11,7 @@
 @interface IWStudent ()
 
 @property float budget;
-//@property NSDictionary *marks;
+@property NSData *marks;
 
 @end
 
@@ -19,10 +19,10 @@
 
 @dynamic name;
 @dynamic password;
-//@dynamic courses;
-//@dynamic specialization;
+@dynamic courses;
+@dynamic specialization;
 @dynamic budget;
-//@dynamic marks;
+@dynamic marks;
 
 + (IWStudent *)studentWithName:(NSString *)name andPass:(NSString *)pass {
     IWStudent *student = [IWStudent newRecord];
@@ -38,5 +38,6 @@
     
     return student;
 }
+
 
 @end

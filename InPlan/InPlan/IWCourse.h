@@ -12,8 +12,10 @@
 @interface IWCourse : ActiveRecord
 
 @property NSString *name;
-//@property IWRequiments *req;
+@property NSData *req;//IWRequiments
 @property float price;
-//@property NSArray *professors;
+@property NSData *professors;//NSArray
+
++ (IWCourse *)courseWithName:(NSString *)name andPrice:(float)price;
 
 @end

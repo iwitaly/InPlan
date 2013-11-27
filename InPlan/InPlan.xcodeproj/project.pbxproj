@@ -14,6 +14,8 @@
 		734902F11844F6A7001FF1BF /* IWRequiments.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902F01844F6A7001FF1BF /* IWRequiments.m */; };
 		734902F418452677001FF1BF /* IWRegistationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902F318452677001FF1BF /* IWRegistationViewController.m */; };
 		734902F718452AED001FF1BF /* IWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902F618452AED001FF1BF /* IWLoginViewController.m */; };
+		734902FC18466329001FF1BF /* IWCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902FB18466329001FF1BF /* IWCoursesViewController.m */; };
+		734902FF18466A1C001FF1BF /* IWCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902FE18466A1C001FF1BF /* IWCourseDetailViewController.m */; };
 		73F3A4691842AB5F008493E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3A4681842AB5F008493E9 /* Foundation.framework */; };
 		73F3A46B1842AB5F008493E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3A46A1842AB5F008493E9 /* CoreGraphics.framework */; };
 		73F3A46D1842AB5F008493E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3A46C1842AB5F008493E9 /* UIKit.framework */; };
@@ -57,6 +59,10 @@
 		734902F318452677001FF1BF /* IWRegistationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWRegistationViewController.m; sourceTree = "<group>"; };
 		734902F518452AED001FF1BF /* IWLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWLoginViewController.h; sourceTree = "<group>"; };
 		734902F618452AED001FF1BF /* IWLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWLoginViewController.m; sourceTree = "<group>"; };
+		734902FA18466329001FF1BF /* IWCoursesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWCoursesViewController.h; sourceTree = "<group>"; };
+		734902FB18466329001FF1BF /* IWCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWCoursesViewController.m; sourceTree = "<group>"; };
+		734902FD18466A1C001FF1BF /* IWCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWCourseDetailViewController.h; sourceTree = "<group>"; };
+		734902FE18466A1C001FF1BF /* IWCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWCourseDetailViewController.m; sourceTree = "<group>"; };
 		73F3A4651842AB5F008493E9 /* InPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F3A4681842AB5F008493E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		73F3A46A1842AB5F008493E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,6 +109,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		734902F81846256A001FF1BF /* ViewControolers */ = {
+			isa = PBXGroup;
+			children = (
+				73F3A47D1842AB5F008493E9 /* IWIntroViewController.h */,
+				73F3A47E1842AB5F008493E9 /* IWIntroViewController.m */,
+				734902F218452677001FF1BF /* IWRegistationViewController.h */,
+				734902F318452677001FF1BF /* IWRegistationViewController.m */,
+				734902F518452AED001FF1BF /* IWLoginViewController.h */,
+				734902F618452AED001FF1BF /* IWLoginViewController.m */,
+				734902FA18466329001FF1BF /* IWCoursesViewController.h */,
+				734902FB18466329001FF1BF /* IWCoursesViewController.m */,
+				734902FD18466A1C001FF1BF /* IWCourseDetailViewController.h */,
+				734902FE18466A1C001FF1BF /* IWCourseDetailViewController.m */,
+			);
+			name = ViewControolers;
+			sourceTree = "<group>";
+		};
+		734902F918462576001FF1BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				734902E01844EB19001FF1BF /* IWStudent.h */,
+				734902E11844EB19001FF1BF /* IWStudent.m */,
+				734902E31844EB28001FF1BF /* IWCourse.h */,
+				734902E41844EB28001FF1BF /* IWCourse.m */,
+				734902EC1844F611001FF1BF /* IWSpecialization.h */,
+				734902ED1844F611001FF1BF /* IWSpecialization.m */,
+				734902EF1844F6A7001FF1BF /* IWRequiments.h */,
+				734902F01844F6A7001FF1BF /* IWRequiments.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		73F3A45C1842AB5F008493E9 = {
 			isa = PBXGroup;
 			children = (
@@ -141,20 +179,8 @@
 				73F3A4771842AB5F008493E9 /* IWAppDelegate.h */,
 				73F3A4781842AB5F008493E9 /* IWAppDelegate.m */,
 				73F3A47A1842AB5F008493E9 /* Main.storyboard */,
-				73F3A47D1842AB5F008493E9 /* IWIntroViewController.h */,
-				73F3A47E1842AB5F008493E9 /* IWIntroViewController.m */,
-				734902F218452677001FF1BF /* IWRegistationViewController.h */,
-				734902F318452677001FF1BF /* IWRegistationViewController.m */,
-				734902F518452AED001FF1BF /* IWLoginViewController.h */,
-				734902F618452AED001FF1BF /* IWLoginViewController.m */,
-				734902E01844EB19001FF1BF /* IWStudent.h */,
-				734902E11844EB19001FF1BF /* IWStudent.m */,
-				734902E31844EB28001FF1BF /* IWCourse.h */,
-				734902E41844EB28001FF1BF /* IWCourse.m */,
-				734902EC1844F611001FF1BF /* IWSpecialization.h */,
-				734902ED1844F611001FF1BF /* IWSpecialization.m */,
-				734902EF1844F6A7001FF1BF /* IWRequiments.h */,
-				734902F01844F6A7001FF1BF /* IWRequiments.m */,
+				734902F81846256A001FF1BF /* ViewControolers */,
+				734902F918462576001FF1BF /* Models */,
 				73F3A4801842AB5F008493E9 /* Images.xcassets */,
 				73F3A46F1842AB5F008493E9 /* Supporting Files */,
 			);
@@ -332,6 +358,8 @@
 				734902EE1844F611001FF1BF /* IWSpecialization.m in Sources */,
 				734902E51844EB28001FF1BF /* IWCourse.m in Sources */,
 				73F3A4751842AB5F008493E9 /* main.m in Sources */,
+				734902FC18466329001FF1BF /* IWCoursesViewController.m in Sources */,
+				734902FF18466A1C001FF1BF /* IWCourseDetailViewController.m in Sources */,
 				734902F11844F6A7001FF1BF /* IWRequiments.m in Sources */,
 				73F3A47F1842AB5F008493E9 /* IWIntroViewController.m in Sources */,
 			);
