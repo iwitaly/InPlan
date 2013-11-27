@@ -14,7 +14,7 @@
 @implementation IWAppDelegate
 
 #warning implement in future
-- (void)addCourseWithName:(NSString *)name price:(float)price requiments:(NSArray *)req professors:(NSArray *)prof {
+- (void)addCourseWithName:(NSString *)name price:(float)price requiments:(NSMutableArray *)req professors:(NSMutableArray *)prof {
     IWCourse *course = [IWCourse courseWithName:name andPrice:price];
     course.req = [NSKeyedArchiver archivedDataWithRootObject:req];
     course.professors = [NSKeyedArchiver archivedDataWithRootObject:prof];
@@ -23,12 +23,12 @@
 }
 
 - (void)createDefaultCoursesAndUsersToDataBase {
-    NSArray *professors = [NSArray arrayWithObjects:@"Besov", @"Beck", nil];
-    NSArray *requiments;
+    NSMutableArray *professors = [NSMutableArray arrayWithObjects:@"Besov", @"Beck", nil];
+    NSMutableArray *requiments;
     [self addCourseWithName:@"Matan" price:100 requiments:nil professors:professors];
     
-    professors = [NSArray arrayWithObjects:@"Jaskov", @"Musin", nil];
-    requiments = [NSArray arrayWithObjects:@"Matan", nil];
+    professors = [NSMutableArray arrayWithObjects:@"Jaskov", @"Musin", nil];
+    requiments = [NSMutableArray arrayWithObjects:@"Matan", nil];
     [self addCourseWithName:@"Theory of probability" price:250 requiments:requiments professors:professors];
 }
 

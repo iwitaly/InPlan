@@ -7,6 +7,7 @@
 //
 
 #import "IWCourseDetailViewController.h"
+#import "IWStudent.h"
 
 @interface IWCourseDetailViewController ()
 
@@ -22,8 +23,8 @@
 - (void)setupData {
     self.name.text = self.course.name;
     self.price.text = [NSString stringWithFormat:@"Prise of this course is: %d", (int)self.course.price];
-    NSArray *proff = [NSKeyedUnarchiver unarchiveObjectWithData: self.course.professors];
-    NSArray *req = [NSKeyedUnarchiver unarchiveObjectWithData: self.course.req];
+    NSMutableArray *proff = [NSKeyedUnarchiver unarchiveObjectWithData: self.course.professors];
+    NSMutableArray *req = [NSKeyedUnarchiver unarchiveObjectWithData: self.course.req];
     
     NSMutableString *prof = [[NSMutableString alloc] init];
     NSMutableString *reqs = [[NSMutableString alloc] init];
@@ -35,8 +36,28 @@
         [reqs appendString:[NSString stringWithFormat:@"%@ ", name]];
     }
     
+    if ([reqs isEqualToString:@""]) {
+        self.req.text = @"Requiments: school";
+    }
     self.prof.text = [NSString stringWithFormat:@"Proffessors: %@", prof];
     self.req.text = [NSString stringWithFormat:@"Requiments: %@", reqs];
+}
+
+- (IBAction)buyCourse {
+    NSString *currentUserName = [[NSUserDefaults standardUserDefaults] stringForKey:@"name"];
+    IWStudent *currentStudent = [IWStudent studentWithNameFromBase:currentUserName];
+    
+    if (self.course.price <= currentStudent.budget) {
+        if (currentStudent.courses == nil) {
+            currentStudent.courses = [[NSArray alloc] init];
+        }
+        
+        NSArray *newArr = [NSArray arrayWithObjects:self.course.name, currentStudent.courses, nil];
+        currentStudent.courses = newArr;
+        currentStudent.budget -= self.course.price;
+        
+        [currentStudent update];
+    }
 }
 
 - (void)viewDidLoad {

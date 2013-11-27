@@ -10,13 +10,11 @@
 
 @interface IWStudent ()
 
-@property float budget;
 @property NSData *marks;
 
 @end
 
 @implementation IWStudent
-
 @dynamic name;
 @dynamic password;
 @dynamic courses;
@@ -39,5 +37,8 @@
     return student;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"students name %@, courses %@", self.name, self.courses];
+}
 
 @end

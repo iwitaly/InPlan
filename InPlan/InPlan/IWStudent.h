@@ -9,16 +9,19 @@
 #import "ActiveRecord.h"
 #import "IWCourse.h"
 #import "IWSpecialization.h"
+#import <Foundation/Foundation.h>
 
 @interface IWStudent : ActiveRecord
 
-@property NSString *name;
+@property (nonatomic, retain) NSString *name;
 
-@property NSString *password;
+@property (readwrite) NSString *password;
 
-@property NSData *courses;
+@property (nonatomic, retain) NSArray *courses;
 
-@property NSData *specialization; //IWSpecialization
+@property (readwrite) NSData *specialization; //IWSpecialization
+
+@property (readwrite) float budget;
 
 + (IWStudent *)studentWithName:(NSString *)name andPass:(NSString *)pass;
 + (IWStudent *)studentWithNameFromBase:(NSString *)name;

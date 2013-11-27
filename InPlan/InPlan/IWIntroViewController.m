@@ -14,7 +14,6 @@
 
 @implementation IWIntroViewController
 
-
 - (void)presentLogoOfMipt {
     UIImageView *mipt = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     CGPoint centre = self.view.center;
@@ -29,7 +28,6 @@
     [self presentLogoOfMipt];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
 
 - (IBAction)userChoseHisType:(UIButton *)sender {
     [self performSegueWithIdentifier:@"userChoseHisType" sender:nil];

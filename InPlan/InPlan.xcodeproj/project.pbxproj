@@ -16,6 +16,7 @@
 		734902F718452AED001FF1BF /* IWLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902F618452AED001FF1BF /* IWLoginViewController.m */; };
 		734902FC18466329001FF1BF /* IWCoursesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902FB18466329001FF1BF /* IWCoursesViewController.m */; };
 		734902FF18466A1C001FF1BF /* IWCourseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 734902FE18466A1C001FF1BF /* IWCourseDetailViewController.m */; };
+		735A53D81846797F00DCEB36 /* IWMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 735A53D71846797F00DCEB36 /* IWMeViewController.m */; };
 		73F3A4691842AB5F008493E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3A4681842AB5F008493E9 /* Foundation.framework */; };
 		73F3A46B1842AB5F008493E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3A46A1842AB5F008493E9 /* CoreGraphics.framework */; };
 		73F3A46D1842AB5F008493E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F3A46C1842AB5F008493E9 /* UIKit.framework */; };
@@ -63,6 +64,8 @@
 		734902FB18466329001FF1BF /* IWCoursesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWCoursesViewController.m; sourceTree = "<group>"; };
 		734902FD18466A1C001FF1BF /* IWCourseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWCourseDetailViewController.h; sourceTree = "<group>"; };
 		734902FE18466A1C001FF1BF /* IWCourseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWCourseDetailViewController.m; sourceTree = "<group>"; };
+		735A53D61846797F00DCEB36 /* IWMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMeViewController.h; sourceTree = "<group>"; };
+		735A53D71846797F00DCEB36 /* IWMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMeViewController.m; sourceTree = "<group>"; };
 		73F3A4651842AB5F008493E9 /* InPlan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InPlan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73F3A4681842AB5F008493E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		73F3A46A1842AB5F008493E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 				734902FB18466329001FF1BF /* IWCoursesViewController.m */,
 				734902FD18466A1C001FF1BF /* IWCourseDetailViewController.h */,
 				734902FE18466A1C001FF1BF /* IWCourseDetailViewController.m */,
+				735A53D61846797F00DCEB36 /* IWMeViewController.h */,
+				735A53D71846797F00DCEB36 /* IWMeViewController.m */,
 			);
 			name = ViewControolers;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				735A53D81846797F00DCEB36 /* IWMeViewController.m in Sources */,
 				734902F418452677001FF1BF /* IWRegistationViewController.m in Sources */,
 				73F3A4791842AB5F008493E9 /* IWAppDelegate.m in Sources */,
 				734902E21844EB19001FF1BF /* IWStudent.m in Sources */,

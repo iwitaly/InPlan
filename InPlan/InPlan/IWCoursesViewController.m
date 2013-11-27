@@ -41,16 +41,15 @@
     return self.courses.count;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"courseDetail" sender:nil];
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     UILabel *label = (UILabel *)[cell viewWithTag:100];
+    UILabel *price = (UILabel *)[cell viewWithTag:200];
+    
     IWCourse *course = self.courses[indexPath.row];
     label.text = course.name;
+    price.text = [NSString stringWithFormat:@"%d", (int)course.price];
     
     return cell;
 }

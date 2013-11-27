@@ -14,7 +14,7 @@
 @property NSString *name;
 @property NSData *req;//IWRequiments
 @property float price;
-@property NSData *professors;//NSArray
+@property NSData *professors;//NSMutableArray
 
 + (IWCourse *)courseWithName:(NSString *)name andPrice:(float)price;
 
