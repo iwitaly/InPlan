@@ -20,7 +20,11 @@
     centre.y -= 200;
     mipt.center = centre;
     
+    mipt.alpha=0;
     [self.view addSubview:mipt];
+    [UIView animateWithDuration:3 animations:^{
+        mipt.alpha=1.0;
+    }];
 }
 
 - (void)viewDidLoad {
