@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *price;
 @property (strong, nonatomic) IBOutlet UILabel *prof;
 @property (strong, nonatomic) IBOutlet UILabel *req;
+@property (strong, nonatomic) IBOutlet UIButton *buyButton;
 
 @end
 
@@ -56,12 +57,32 @@
         currentStudent.courses = newArr;
         currentStudent.budget -= self.course.price;
         
+        self.buyButton.hidden = YES;
+        
         [currentStudent update];
+    }
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"Oops!"
+                                    message:@"You don't have enought money to buy that course"
+                                   delegate:nil
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil]
+         show];
+    }
+}
+
+- (void)checkForBalidCourse {
+    NSString *currentUserName = [[NSUserDefaults standardUserDefaults] stringForKey:@"name"];
+    IWStudent *currentStudent = [IWStudent studentWithNameFromBase:currentUserName];
+    
+    if ([(NSString *)currentStudent.courses rangeOfString:self.course.name].location == NSNotFound) {
+        self.buyButton.hidden = YES;
     }
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self checkForBalidCourse];
     [self setupData];
 	// Do any additional setup after loading the view.
 }

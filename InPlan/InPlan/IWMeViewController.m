@@ -30,7 +30,11 @@
         self.courses.text = @"No course yet";
     }
     else {
-        self.courses.text = [NSString stringWithFormat:@"My courses: %@", (NSString *)student.courses];
+        NSString *newStr = [(NSString *)student.courses stringByReplacingOccurrencesOfString:@"(" withString:@""];
+        newStr = [newStr stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+        newStr = [newStr stringByReplacingOccurrencesOfString:@")" withString:@""];
+        
+        self.courses.text = [NSString stringWithFormat:@"My courses: %@", newStr];
     }
 }
 

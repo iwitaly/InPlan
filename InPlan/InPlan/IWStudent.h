@@ -25,5 +25,6 @@
 
 + (IWStudent *)studentWithName:(NSString *)name andPass:(NSString *)pass;
 + (IWStudent *)studentWithNameFromBase:(NSString *)name;
++ (IWStudent *)studentWithName:(NSString *)name budget:(float)budget courses:(NSArray *)courses specialization:(IWSpecialization *)spes;
 
 @end

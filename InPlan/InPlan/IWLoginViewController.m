@@ -23,8 +23,6 @@
         IWStudent *studentFromBase = [IWStudent studentWithNameFromBase:self.login.text];
         if (studentFromBase) {
             if ([studentFromBase.password isEqualToString:self.password.text]) {
-                studentFromBase.budget = 1000;
-
                 [[NSUserDefaults standardUserDefaults] setObject:studentFromBase.name forKey:@"name"];
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 

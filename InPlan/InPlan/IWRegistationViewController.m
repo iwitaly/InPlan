@@ -26,8 +26,10 @@
     if (![self.login.text isEqualToString:@""] && ![self.pass.text isEqualToString:@""]) {
         IWStudent *student = [IWStudent studentWithName:self.login.text andPass:self.pass.text];
         
+        student.budget = 500;
+
         [student save];
-                
+        
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }

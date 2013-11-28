@@ -37,6 +37,16 @@
     return student;
 }
 
++ (IWStudent *)studentWithName:(NSString *)name budget:(float)budget courses:(NSArray *)courses specialization:(IWSpecialization *)spes {
+    IWStudent *student = [IWStudent newRecord];
+    student.name = name;
+    student.budget = budget;
+    student.courses = courses;
+    student.specialization = [NSKeyedArchiver archivedDataWithRootObject:spes];
+    
+    return student;
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat:@"students name %@, courses %@", self.name, self.courses];
 }

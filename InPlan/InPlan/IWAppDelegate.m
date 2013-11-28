@@ -13,13 +13,17 @@
 
 @implementation IWAppDelegate
 
-#warning implement in future
 - (void)addCourseWithName:(NSString *)name price:(float)price requiments:(NSMutableArray *)req professors:(NSMutableArray *)prof {
     IWCourse *course = [IWCourse courseWithName:name andPrice:price];
     course.req = [NSKeyedArchiver archivedDataWithRootObject:req];
     course.professors = [NSKeyedArchiver archivedDataWithRootObject:prof];
     
     [course save];
+}
+
+- (void)addStudentWithName:(NSString *)name budget:(float)budget courses:(NSArray *)courses specialization:(IWSpecialization *)spes {
+    IWStudent *student = [IWStudent studentWithName:name budget:budget courses:courses specialization:spes];
+    [student save];
 }
 
 - (void)createDefaultCoursesAndUsersToDataBase {
@@ -30,6 +34,10 @@
     professors = [NSMutableArray arrayWithObjects:@"Jaskov", @"Musin", nil];
     requiments = [NSMutableArray arrayWithObjects:@"Matan", nil];
     [self addCourseWithName:@"Theory of probability" price:250 requiments:requiments professors:professors];
+    
+    
+    NSString *name = @"Eduard Maslennikov";
+    [self addStudentWithName:name budget:0 courses:nil specialization:nil];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -39,8 +47,8 @@
         NSLog(@"%@", config.databasePath);
     }];
     
-    [ActiveRecord clearDatabase];
-    [self createDefaultCoursesAndUsersToDataBase];
+//    [ActiveRecord clearDatabase];
+//    [self createDefaultCoursesAndUsersToDataBase];
     
     return YES;
 }
