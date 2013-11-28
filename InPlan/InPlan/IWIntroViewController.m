@@ -17,7 +17,7 @@
 - (void)presentLogoOfMipt {
     UIImageView *mipt = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"logo.png"]];
     CGPoint centre = self.view.center;
-    centre.y -= 200;
+    centre.y -= 170;
     mipt.center = centre;
     
     mipt.alpha=0;
