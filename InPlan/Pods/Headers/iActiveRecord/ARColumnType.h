@@ -1,0 +1,1 @@
+../../iActiveRecord/iActiveRecord/Classes/Enums/ARColumnType.h

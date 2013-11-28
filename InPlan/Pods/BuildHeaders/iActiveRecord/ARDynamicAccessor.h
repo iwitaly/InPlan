@@ -1,0 +1,1 @@
+../../iActiveRecord/iActiveRecord/Classes/Core/DynamicAccessor/ARDynamicAccessor.h

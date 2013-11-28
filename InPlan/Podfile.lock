@@ -1,0 +1,14 @@
+PODS:
+  - iActiveRecord (1.9)
+
+DEPENDENCIES:
+  - iActiveRecord (from `https://github.com/AlexDenisov/iActiveRecord`)
+
+EXTERNAL SOURCES:
+  iActiveRecord:
+    :git: https://github.com/AlexDenisov/iActiveRecord
+
+SPEC CHECKSUMS:
+  iActiveRecord: 8ff38d2263a0c1a94a85c477b9c9b483a7728aa3
+
+COCOAPODS: 0.25.0

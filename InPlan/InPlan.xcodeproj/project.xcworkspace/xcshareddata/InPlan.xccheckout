@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>220303A7-8FA0-4D2B-84E7-653853F48FA1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>InPlan</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF8ABF31-9264-401A-9C98-5B3FE7851BED</key>
+		<string>https://github.com/iwitaly/InPlan.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>InPlan/InPlan.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF8ABF31-9264-401A-9C98-5B3FE7851BED</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/iwitaly/InPlan.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF8ABF31-9264-401A-9C98-5B3FE7851BED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF8ABF31-9264-401A-9C98-5B3FE7851BED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>InPlan</string>
+		</dict>
+	</array>
+</dict>
+</plist>

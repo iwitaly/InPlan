@@ -1,0 +1,1 @@
+../../iActiveRecord/iActiveRecord/Classes/NSString+lowercaseFirst.h

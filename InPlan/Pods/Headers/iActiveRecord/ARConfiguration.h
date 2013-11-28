@@ -1,0 +1,1 @@
+../../iActiveRecord/iActiveRecord/Classes/Configuration/ARConfiguration.h

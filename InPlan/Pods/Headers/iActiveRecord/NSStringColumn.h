@@ -1,0 +1,1 @@
+../../iActiveRecord/iActiveRecord/Classes/Core/Columns/ConcreteColumns/NSStringColumn.h

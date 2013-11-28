@@ -1,0 +1,1 @@
+../../iActiveRecord/iActiveRecord/Classes/class_getSubclasses.h

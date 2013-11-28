@@ -1,0 +1,1 @@
+../../iActiveRecord/iActiveRecord/Classes/ARRelationBelongsTo.h

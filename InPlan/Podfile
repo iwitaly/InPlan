@@ -1,0 +1,3 @@
+platform :ios, :deployment_target => "7.0"
+inhibit_all_warnings!
+pod 'iActiveRecord', :git => 'https://github.com/AlexDenisov/iActiveRecord'
