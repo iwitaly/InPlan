@@ -71,7 +71,7 @@
     }
 }
 
-- (void)checkForBalidCourse {
+- (void)checkForValidCourse {
     NSString *currentUserName = [[NSUserDefaults standardUserDefaults] stringForKey:@"name"];
     IWStudent *currentStudent = [IWStudent studentWithNameFromBase:currentUserName];
     
@@ -82,7 +82,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self checkForBalidCourse];
+    [self checkForValidCourse];
     [self setupData];
 	// Do any additional setup after loading the view.
 }
