@@ -20,6 +20,10 @@
 
 - (void)initArrayOfCourses {
     self.courses = [IWCourse allRecords];
+    
+    if (!self.courses) {
+        //погнали
+    }
 }
 
 - (void)viewDidLoad {
